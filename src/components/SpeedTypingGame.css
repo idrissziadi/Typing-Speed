@@ -1,0 +1,132 @@
+/* Main Container */
+.container {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+    padding: 40px;
+    background: linear-gradient(135deg, #282c34, #3e4b61);
+    color: #ffffff;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    min-width: 100vw;
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+    0% { opacity: 0; transform: translateY(-10px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+/* Input Field */
+.input-field {
+    width: 100%;
+    max-width: 600px;
+    height: 100px;
+    margin-bottom: 20px;
+    font-size: 18px;
+    padding: 15px;
+    border: 2px solid #444;
+    border-radius: 8px;
+    background-color: #f0f0f0;
+    color: #333;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    outline: none;
+}
+
+.input-field:focus {
+    border-color: #4CAF50;
+    box-shadow: 0 0 8px rgba(76, 175, 80, 0.6);
+}
+
+/* Typing Text */
+.typing-text {
+    font-size: 20px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    white-space: pre-wrap;
+    text-align: left;
+    max-width: 600px;
+    background-color: #1e1e1e;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    animation: typingEffect 2s steps(40) 1;
+    overflow: hidden;
+}
+
+/* Typing Effect Animation */
+@keyframes typingEffect {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+/* Word Styles */
+.word {
+    display: inline;
+    transition: color 0.3s ease;
+}
+
+.word.correct {
+    color: #4CAF50;
+    font-weight: bold;
+    text-shadow: 0 0 5px #4CAF50;
+}
+
+.word.incorrect {
+    color: #f44336;
+    font-weight: bold;
+    text-shadow: 0 0 5px #f44336;
+}
+
+/* Stats */
+.stats {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+.stats-item {
+    text-align: center;
+}
+
+.stats-item h2 {
+    margin: 0;
+    font-size: 20px;
+    color: #a9a9a9;
+}
+
+.stats-item p {
+    margin: 5px 0;
+    font-size: 28px;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+/* Buttons */
+button {
+    font-size: 18px;
+    padding: 10px 20px;
+    margin: 5px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background: linear-gradient(45deg, #3e9b8a, #48c78e);
+    color: #ffffff;
+    transition: background 0.3s, transform 0.2s;
+}
+
+button:focus {
+    outline: none;
+}
+
+button:hover {
+    background: linear-gradient(45deg, #48c78e, #3e9b8a);
+    transform: translateY(-2px);
+}
