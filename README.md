@@ -1,2 +1,2 @@
 # Typing-Speed
-Typing-Speed app to measure keyboard typing speed.
+Typing-Speed is react app to measure keyboard typing speed.
