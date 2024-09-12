@@ -3,7 +3,7 @@
 Typing-Speed est une application React interactive conçue pour mesurer la vitesse de frappe au clavier des utilisateurs. Elle offre une expérience engageante et visuelle pour aider à améliorer la précision et la rapidité de la frappe.
 ## Screenshots
 
-![Home Screen](./../screenshots/image.png)
+![Home Screen](./screenshots/image.png)
 ## Fonctionnalités
 
 - **Test de vitesse de frappe en temps réel** : Tapez les mots affichés à l'écran et obtenez instantanément des statistiques telles que les mots par minute (WPM), les caractères par minute (CPM), et le nombre d'erreurs.
