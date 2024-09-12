@@ -1,70 +1,71 @@
-# Getting Started with Create React App
+# Typing-Speed
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Typing-Speed est une application React interactive conçue pour mesurer la vitesse de frappe au clavier des utilisateurs. Elle offre une expérience engageante et visuelle pour aider à améliorer la précision et la rapidité de la frappe.
+## Screenshots
 
-## Available Scripts
+![Home Screen](./screenshots/image.png)
+## Fonctionnalités
 
-In the project directory, you can run:
+- **Test de vitesse de frappe en temps réel** : Tapez les mots affichés à l'écran et obtenez instantanément des statistiques telles que les mots par minute (WPM), les caractères par minute (CPM), et le nombre d'erreurs.
+- **Feedback visuel** : Les mots correctement tapés apparaissent en vert, tandis que les erreurs apparaissent en rouge.
+- **Effets animés** : Les animations apportent une touche moderne et dynamique à l'interface.
+- **Statistiques complètes** : Suivez vos performances avec des statistiques détaillées à chaque session.
+- **Interface utilisateur réactive et intuitive** : Conçue avec une esthétique épurée et des éléments interactifs.
 
-### `npm start`
+## Installation
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Pour exécuter l'application localement, suivez ces étapes :
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+1. Clonez le dépôt sur votre machine locale :
 
-### `npm test`
+    ```bash
+    git clone https://github.com/idrissziadi/Typing-Speed.git
+    cd Typing-Speed
+    ```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+2. Installez les dépendances requises :
 
-### `npm run build`
+    ```bash
+    npm install
+    ```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+3. Démarrez l'application :
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+    ```bash
+    npm start
+    ```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+4. Ouvrez votre navigateur et visitez `http://localhost:3000` pour voir l'application en action.
 
-### `npm run eject`
+## Utilisation
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+1. Cliquez sur le bouton "Démarrer le test" pour commencer à tester votre vitesse de frappe.
+2. Commencez à taper les mots affichés dans le champ prévu à cet effet.
+3. Surveillez vos statistiques en temps réel (mots par minute, caractères par minute, erreurs, etc.).
+4. À la fin du test, une vue d'ensemble de vos statistiques vous sera présentée.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Technologies Utilisées
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+- **React** : Bibliothèque JavaScript pour créer des interfaces utilisateur.
+- **Material-UI** : Bibliothèque de composants UI pour React, utilisée pour le style de l'application.
+- **CSS3** : Pour le style personnalisé et les animations.
+- **JavaScript** : Logique de l'application.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Contributions
 
-## Learn More
+Les contributions sont les bienvenues ! Si vous avez des idées d'amélioration, veuillez suivre ces étapes :
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+1. **Fork** le projet.
+2. Créez votre **branche de fonctionnalité** (`git checkout -b feature/AmazingFeature`).
+3. **Commitez** vos changements (`git commit -m 'Add some AmazingFeature'`).
+4. **Poussez** vers la branche (`git push origin feature/AmazingFeature`).
+5. **Ouvrez une Pull Request**.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## License
 
-### Code Splitting
+Distribué sous la licence MIT. Voir `LICENSE` pour plus d'informations.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## Contact
 
-### Analyzing the Bundle Size
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Lien du projet: [https://github.com/idriss.ziadi47@gmail.com/Typing-Speed](https://github.com/idrissziadi/Typing-Speed)
