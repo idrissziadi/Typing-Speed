@@ -1,12 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import './SpeedTypingGame.css';
+import paragraphs from './paragraphs'; // Import paragraphs from the new file
 
 const SpeedTypingGame = () => {
-    const paragraphs = [
-        "Les technologies évoluent rapidement et transforment notre quotidien de manière spectaculaire. Chaque jour, nous assistons à de nouvelles innovations qui rendent nos vies plus faciles et plus connectées. Que ce soit dans le domaine de l'intelligence artificielle, des véhicules autonomes ou des technologies de communication, les avancées sont constantes. Il est essentiel de rester informé et adaptable pour tirer le meilleur parti de ces évolutions et maintenir une longueur d'avance dans un monde en perpétuel changement."
-        // Ajoutez plus de paragraphes pour varier les tests
-    ];
-
     const [text, setText] = useState('');
     const [typingText, setTypingText] = useState([]);
     const [inpFieldValue, setInpFieldValue] = useState('');
@@ -18,11 +14,12 @@ const SpeedTypingGame = () => {
     const [CPM, setCPM] = useState(0);
     const [showWelcomeMessage, setShowWelcomeMessage] = useState(true);
     const [difficulty, setDifficulty] = useState('medium'); // default difficulty
+    const [language, setLanguage] = useState('English'); // default language
 
     useEffect(() => {
         if (isTyping && timeLeft > 0) {
             const interval = setInterval(() => {
-                setTimeLeft(prevTime => {
+                setTimeLeft((prevTime) => {
                     const newTime = prevTime - 1;
                     updateStats();
                     return newTime;
@@ -35,16 +32,30 @@ const SpeedTypingGame = () => {
     }, [isTyping, timeLeft]);
 
     const loadParagraph = () => {
-        const ranIndex = Math.floor(Math.random() * paragraphs.length);
-        setText(paragraphs[ranIndex]);
-        setTypingText(paragraphs[ranIndex].split(' ').map((word, index) => (
-            <span key={index} className="word">{word} </span>
-        )));
+        const filteredParagraphs = paragraphs.filter(
+            (p) => p.language === language && p.level === difficulty
+        );
+    
+        if (filteredParagraphs.length === 0) {
+            alert("Aucun paragraphe trouvé pour cette langue et ce niveau de difficulté.");
+            return;
+        }
+    
+        const ranIndex = Math.floor(Math.random() * filteredParagraphs.length);
+        const selectedParagraph = filteredParagraphs[ranIndex].text;
+    
+        setText(selectedParagraph);
+        setTypingText(
+            selectedParagraph.split(' ').map((word, index) => (
+                <span key={index} className="word">{word} </span>
+            ))
+        );
         setInpFieldValue('');
         setCharIndex(0);
         setMistakes(0);
-        setShowWelcomeMessage(false); // Hide welcome message once the game starts
+        setShowWelcomeMessage(false);
     };
+    
 
     const handleChange = (event) => {
         const typedText = event.target.value;
@@ -104,6 +115,10 @@ const SpeedTypingGame = () => {
         setDifficulty(event.target.value);
     };
 
+    const handleLanguageChange = (event) => {
+        setLanguage(event.target.value);
+    };
+
     return (
         <div className="container">
             {showWelcomeMessage && (
@@ -150,6 +165,17 @@ const SpeedTypingGame = () => {
                         <option value="easy">Easy</option>
                         <option value="medium">Medium</option>
                         <option value="hard">Hard</option>
+                    </select>
+                </label>
+            </div>
+            <div className="language-selector">
+                <label>
+                    Language:
+                    <select value={language} onChange={handleLanguageChange}>
+                        <option value="English">English</option>
+                        <option value="French">French</option>
+                        <option value="Spanish">Spanish</option>
+                        {/* Add more languages as needed */}
                     </select>
                 </label>
             </div>
